@@ -4,7 +4,7 @@ import data from "./data.json"
 
 export default function Listproduct(props) {
 
-    const { productfromitemprops } = props
+    const { productfromitemprops, addcartfromlistprops } = props
 
     const [item, setitem] = useState(data);
 
@@ -15,7 +15,11 @@ export default function Listproduct(props) {
         productfromitemprops(item)
     }
 
-    const itemmap = item.map((product) => <Itemproduct key={product.id} productprops={product} productlistprops={productlist} />)
+    const addcartfromitem = (addcart) => {
+        addcartfromlistprops(addcart)
+    }
+
+    const itemmap = item.map((product) => <Itemproduct key={product.id} productprops={product} productlistprops={productlist} addcartfromitemprops={addcartfromitem} />)
 
 
 
@@ -49,7 +53,7 @@ export default function Listproduct(props) {
                     </div>
 
 
-                    <div className="relative text-2xl cursor-pointer">
+                    <div data-modal-target="cart-modal" data-modal-toggle="cart-modal" className="relative text-2xl cursor-pointer">
                         <i className="fa-solid fa-cart-shopping"></i>
                         <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                             3
@@ -86,10 +90,6 @@ export default function Listproduct(props) {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4 p-4">
                 {itemmap}
             </div>
-
-
-
-
 
         </>
 

@@ -1,11 +1,16 @@
 export default function Itemproduct(props) {
 
-    const { productprops, productlistprops } = props
+    const { productprops, productlistprops, addcartfromitemprops } = props
 
     const productitemclick = () => {
         productlistprops(productprops)
 
     }
+
+    const addcart = () => {
+        addcartfromitemprops(productprops)
+    }
+
 
     return (
         <div >
@@ -31,7 +36,7 @@ export default function Itemproduct(props) {
                         ${productprops.price}
                     </p>
                 </div>
-                <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                <button onClick={addcart} className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
                     Add to cart
                 </button>
             </div>

@@ -33,19 +33,22 @@ export default function Detail(props) {
                                 <img src={productitemprops.image} alt={productitemprops.name} className="w-full h-64 object-contain rounded-lg" />
 
                                 <div className="space-y-3">
-                                    <p className="text-gray-600 text-sm">
+                                    <p className="text-gray-600 text-sm pb-2">
                                         {productitemprops.description}
+                                    </p>
+                                    <p className="text-gray-600 text-sm">
+                                        {productitemprops.shortDescription}
                                     </p>
                                     <p className="text-2xl font-bold text-red-500">${productitemprops.price}</p>
 
-                                    <div className="flex items-center gap-2">
+                                    {/* <div className="flex items-center gap-2">
                                         <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">-</button>
                                         <span className="px-3">1</span>
                                         <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">+</button>
-                                    </div>
-                                    <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                                    </div> */}
+                                    {/* <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
                                         Add to cart
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
 
