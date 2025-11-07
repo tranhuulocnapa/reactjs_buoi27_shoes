@@ -3,8 +3,6 @@ import React from 'react'
 export default function Detail(props) {
     const { productitemprops } = props
 
-
-
     return (
         <div>
 
@@ -41,14 +39,7 @@ export default function Detail(props) {
                                     </p>
                                     <p className="text-2xl font-bold text-red-500">${productitemprops.price}</p>
 
-                                    {/* <div className="flex items-center gap-2">
-                                        <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">-</button>
-                                        <span className="px-3">1</span>
-                                        <button className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300">+</button>
-                                    </div> */}
-                                    {/* <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-                                        Add to cart
-                                    </button> */}
+
                                 </div>
                             </div>
 
